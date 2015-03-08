@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Vimsert",
+  "version": "0.0.0",
+
+  "description": "Vimsert allows you to edit any textarea in a vim-mode Ace code editor modal.",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.js", "inc/ace.js", "inc/keybinding-vim.js", "inc/theme-solarized_dark.js", "vimsert.js"]
+    }
+  ]
+}

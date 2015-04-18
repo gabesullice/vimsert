@@ -48,10 +48,6 @@ Vimsert utilizes the following open source projects:
 - [Solarized](solarized_theme)
 - [jQuery](jquery_home)
 
-###
-Vimsert makes use of the [Ace editor][ace_editor] which is licensed under the
-BSD license, you can find its license [here][ace_license].
-
 [ace_editor]: http://ace.c9.io
 [solarized_theme]: http://ethanschoonover.com/solarized
 [jquery_home]: https://jquery.com

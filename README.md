@@ -1,4 +1,4 @@
-![Vimsert logo](/icon.png)
+![Vimsert logo](/demo/assets/logo.png)
 Vimsert
 =======
 

@@ -3,9 +3,9 @@ Vimsert
 =======
 
 ###Overview
-Vimsert is a simple, open-source Chrome extension that allows you to open up a
-code editor for any textarea. It is based on the [Ace editor][ace_editor] and
-has its vim keybindings enabled.
+Vimsert is a simple, open-source Chrome extension for editing inputs on the
+web. It puts the power of Vim and the [Ace editor][ace_editor] together in the
+browser. Better yet, it uses the awesome [Solarized][solarized_them] dark theme.
 
 ###Installation
 From your chrome browser, [click here][vimsert_plugin] and 'add to chrome'.
@@ -34,17 +34,26 @@ PRs are welcome! Fork, create a topic branch, do your work, submit a PR into
 Some things I would be grateful for:
 - Screenshots/logo
 - Better name ideas, or let me know this one's not terrible
-- Make Vimsert play nicely with Vimium
-
-This project uses the [Ace code editor][ace_editor].
+- Issues
+- Make Vimsert play more nicely with Vimium
+- See [license](#license) below
 
 ###License
 *Help wanted* I'm not a lawyer, feel free to submit a PR adding a license with
 an ELI5. I'd really only like attribution.
 
+###Credit
+Vimsert utilizes the following open source projects:
+- [Ace editor](ace_editor)
+- [Solarized](solarized_theme)
+- [jQuery](jquery_home)
+
+###
 Vimsert makes use of the [Ace editor][ace_editor] which is licensed under the
 BSD license, you can find its license [here][ace_license].
 
 [ace_editor]: http://ace.c9.io
+[solarized_theme]: http://ethanschoonover.com/solarized
+[jquery_home]: https://jquery.com
 [vimsert_plugin]: https://chrome.google.com/webstore/detail/vimsert/eljjplndnkopkklknfggleclpmiiddac
 [ace_license]: https://github.com/ajaxorg/ace/blob/master/LICENSE

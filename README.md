@@ -31,22 +31,23 @@ Write, then Close
 PRs are welcome! Fork, create a topic branch, do your work, submit a PR into
 `master`.
 
-Some things I would be grateful for:
-- Screenshots/logo
-- Better name ideas, or let me know this one's not terrible
-- Issues
+A few contrib ideas:
 - Make Vimsert play more nicely with Vimium
 - See [license](#license) below
+- Issues
+- No reason this couldn't also work in Firefox
 
 ###License
 *Help wanted* I'm not a lawyer, feel free to submit a PR adding a license with
-an ELI5. I'd really only like attribution.
+an ELI5. I'd really only like attribution and I'm not sure which to choose.
 
 ###Credit
 Vimsert utilizes the following open source projects:
 - [Ace editor](ace_editor)
 - [Solarized](solarized_theme)
 - [jQuery](jquery_home)
+
+Special thanks goes to Nino Silva for the logo design.
 
 [ace_editor]: http://ace.c9.io
 [solarized_theme]: http://ethanschoonover.com/solarized

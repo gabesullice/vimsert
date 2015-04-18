@@ -7,6 +7,8 @@ Vimsert is a simple, open-source Chrome extension for editing inputs on the
 web. It puts the power of Vim and the [Ace editor][ace_editor] together in the
 browser. Better yet, it uses the awesome [Solarized][solarized_theme] dark theme.
 
+![Animated GIF demo](/demo/assets/demo.gif)
+
 ###Installation
 From your chrome browser, [click here][vimsert_plugin] and 'add to chrome'.
 

@@ -2,35 +2,40 @@
   "use strict";
 
   var init, selector, currentTarget,
-      createEditor, addVimsert, textAreaHandler,
+      createEditor, addVimsert, keypressHandler,
+      textAreaHandler,
       aceEditor, veditor,
       openEditor, closeEditor;
 
-  selector = "textarea:not('.ace_editor')";
+  selector = $('textarea').not('.ace_editor').add('input[type="text"]');
 
   $.fn.vimsert = function () {
-    this.bind('keypress', textAreaHandler);
-    //this.bind('blur', function () {
-    //  currentTarget.unbind(textAreaHandler);
-    //});
+    this.bind('keypress', function(e) {
+
+      if (e.ctrlKey && e.charCode == 9) {
+        keypressHandler(e);
+        e.preventDefault();
+      }
+    });
   };
 
-  textAreaHandler = function (e) {
+  keypressHandler = function (e) {
     var content;
 
-    if (e.ctrlKey && e.charCode == 9) {
-      currentTarget = $(e.currentTarget);
-      content = currentTarget.val();
-      aceEditor.setValue(content);
-      openEditor(veditor);
-      e.preventDefault();
-    }
-  }
+    /**
+     * TODO: split this out into a separate function to further decouple it from the event.
+     */
+
+    currentTarget = $(e.currentTarget);
+    content = currentTarget.val();
+    aceEditor.setValue(content);
+    openEditor(veditor);
+  };
 
   init = function () {
     createEditor();
     addVimsert();
-  }
+  };
 
   createEditor = function () {
     $("body").append('<textarea id="vimsert-editor" rows="100" cols="80"></textarea>');
@@ -47,6 +52,7 @@
     ace.config.loadModule("ace/keyboard/vim", function(m) {
       var VimApi = require("ace/keyboard/vim").CodeMirror.Vim;
       VimApi.defineEx("write", "w", function(cm, input) {
+        console.log(currentTarget);
         currentTarget.val(aceEditor.getValue());
       });
       VimApi.defineEx("quit", "q", function(cm, input) {
@@ -59,7 +65,6 @@
     });
     aceEditor.setKeyboardHandler("ace/keyboard/vim");
     aceEditor.getSession();
-
 
     veditor = $('.ace_editor');
 
@@ -75,17 +80,17 @@
       "transform": "translateX(-50%) translateY(-55%)",
       "box-shadow": "#000 0 0 10px"
     });
-  }
+  };
 
   addVimsert = function () {
     $(selector).vimsert();
-  }
+  };
 
   openEditor = function () {
     veditor.css("display", "block");
     aceEditor.focus();
     aceEditor.clearSelection();
-  }
+  };
 
   closeEditor = function () {
     veditor.css("display", "none");
@@ -94,7 +99,7 @@
       currentTarget[0].setSelectionRange(index, index);
       currentTarget.focus()
     }, 100);
-  }
+  };
 
   init();
 }(jQuery, document, window);

@@ -14,7 +14,6 @@
 
       if (e.ctrlKey && e.charCode == 9) {
         keypressHandler(e);
-        e.preventDefault();
       }
     });
   };
@@ -30,6 +29,7 @@
     content = currentTarget.val();
     aceEditor.setValue(content);
     openEditor(veditor);
+    e.preventDefault();
   };
 
   init = function () {
@@ -52,7 +52,6 @@
     ace.config.loadModule("ace/keyboard/vim", function(m) {
       var VimApi = require("ace/keyboard/vim").CodeMirror.Vim;
       VimApi.defineEx("write", "w", function(cm, input) {
-        console.log(currentTarget);
         currentTarget.val(aceEditor.getValue());
       });
       VimApi.defineEx("quit", "q", function(cm, input) {

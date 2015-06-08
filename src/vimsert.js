@@ -3,7 +3,6 @@
 
   var init, selector, currentTarget,
       createEditor, addVimsert, keypressHandler,
-      textAreaHandler,
       aceEditor, veditor,
       openEditor, closeEditor;
 

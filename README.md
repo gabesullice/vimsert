@@ -31,7 +31,7 @@ Write, then Close
 
 ###Contributing
 PRs are welcome! Fork, create a topic branch, do your work, submit a PR into
-`master`.
+`develop`.
 
 A few contrib ideas:
 - Make Vimsert play more nicely with Vimium

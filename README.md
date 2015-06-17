@@ -15,9 +15,9 @@ From your chrome browser, [click here][vimsert_plugin] and 'add to chrome'.
 ###Usage:
 Open the editor
     
-    Ctrl + i # focus must be on a textarea
+    Ctrl + i # focus must be on a textarea/textfield
 
-Write changes to the textarea
+Write changes to the input field
 
     :w
 
